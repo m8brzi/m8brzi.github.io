@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<body>
+    <h1>Spanning Tree Protocol (STP) Overview</h1>
+    <p>Spanning Tree Protocol (STP) enables switches to become aware of other switches through the advertisement and receipt of bridge protocol data units (BPDUs). STP builds a Layer 2 loop-free topology in an environment by temporarily blocking traffic on redundant ports. STP operates by selecting a specific switch as the best switch and running a tree-based algorithm to identify which redundant ports should not forward traffic.</p>
+    
+    <p>STP has multiple iterations:</p>
+    <ul>
+        <li>802.1D, which is the original specification</li>
+        <li>Per-VLAN Spanning Tree (PVST)</li>
+        <li>Per-VLAN Spanning Tree Plus (PVST+)</li>
+        <li>802.1W Rapid Spanning Tree Protocol (RSTP)</li>
+        <li>802.1S Multiple Spanning Tree Protocol (MST)</li>
+    </ul>
+    
+    <p>Catalyst switches now operate in PVST+, RSTP, and MST modes. All three of these modes are backward compatible with 802.1D.</p>
+
+    <div class="image-container">
+        <img src="testimg.jpeg" alt="Spanning Tree Protocol Diagram" width="400">
+        <!-- Replace "your-image.png" with the actual path to your image -->
+        <!-- Adjust the width attribute as needed -->
+    </div>
+</body>
+</html>

@@ -9,32 +9,26 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        h1 {
-            color: #ff0000; /* Red */
+            background-color: #111; /* Black */
+            color: #fff; /* White */
         }
 
         .sidebar {
-            background-color: #333; /* Dark grey */
+            background-color: #222; /* Dark grey */
             height: 100vh;
-            width: 200px;
+            width: 250px;
             position: fixed;
             top: 0;
             left: 0;
-            overflow-x: hidden;
+            overflow-y: auto; /* Enable scrolling if needed */
             padding-top: 20px;
+            border-right: 2px solid #ff0000; /* Red */
         }
 
         .sidebar h2 {
             color: #ff0000; /* Red */
             text-align: center;
+            margin-bottom: 30px;
         }
 
         .sidebar ul {
@@ -45,22 +39,31 @@
 
         .sidebar ul li {
             padding: 10px;
+            border-bottom: 1px solid #444; /* Dark grey */
+        }
+
+        .sidebar ul li:last-child {
+            border-bottom: none;
         }
 
         .sidebar ul li a {
-            color: #fff;
+            color: #fff; /* White */
             text-decoration: none;
             display: block;
-            padding: 10px;
-            transition: 0.3s;
+            transition: color 0.3s;
         }
 
         .sidebar ul li a:hover {
-            background-color: #555; /* Darker grey */
+            color: #ff0000; /* Red */
         }
 
-        .sidebar ul li a:active {
-            background-color: #888; /* Even darker grey */
+        .content {
+            margin-left: 250px; /* Same width as sidebar */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff0000; /* Red */
         }
     </style>
 </head>

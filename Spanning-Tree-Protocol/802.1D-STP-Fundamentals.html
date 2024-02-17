@@ -21,5 +21,18 @@
         <!-- Replace "your-image.png" with the actual path to your image -->
         <!-- Adjust the width attribute as needed -->
     </div>
+    <h2>IEEE 802.1D STP</h2>
+    <p>The original version of STP comes from the IEEE 802.1D standards and provides support for ensuring a loop-free topology for one VLAN. This topic is vital to understand as a foundation for Rapid Spanning Tree Protocol (RSTP) and Multiple Spanning Tree Protocol (MST).</p>
+    
+    <h3>802.1D Port States</h3>
+    <p>In 802.1D STP, every port transitions through the following states:</p>
+    <ul>
+        <li><strong>Disabled:</strong> The port is in an administratively off position (that is, shut down).</li>
+        <li><strong>Blocking:</strong> The switch port is enabled, but the port is not forwarding any traffic to ensure that a loop is not created. The switch does not modify the MAC address table. It can only receive BPDUs from other switches.</li>
+        <li><strong>Listening:</strong> The switch port has transitioned from a blocking state and can now send or receive BPDUs. It cannot forward any other network traffic. The duration of the state correlates to the STP forwarding time. The next port state is learning.</li>
+        <li><strong>Learning:</strong> The switch port can now modify the MAC address table with any network traffic that it receives. The switch still does not forward any other network traffic besides BPDUs. The duration of the state correlates to the STP forwarding time. The next port state is forwarding.</li>
+        <li><strong>Forwarding:</strong> The switch port can forward all network traffic and can update the MAC address table as expected. This is the final state for a switch port to forward network traffic.</li>
+        <li><strong>Broken:</strong> The switch has detected a configuration or an operational problem on a port that can have major effects. The port discards packets as long as the problem continues to exist.</li>
+    </ul>
 </body>
 </html>

@@ -8,10 +8,13 @@
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #000; /* Black text color */
-            background-color: #fff; /* White background color */
+            text-align: center; /* Center-align the content horizontally */
+        }
+
+        .content {
+            max-width: 800px; /* Adjust the max width as needed */
+            margin: 0 auto; /* Center the content horizontally */
+            text-align: left; /* Reset text alignment for content */
         }
 
         .image-container {
@@ -25,15 +28,16 @@
         }
 
         h1, h2, h3 {
-            color: #000; /* Black headings */
+            text-align: center; /* Center-align headings */
         }
 
         ul {
-            padding-left: 20px;
+            text-align: left; /* Left-align lists */
+            padding-left: 20px; /* Add left padding to lists */
         }
 
         a {
-            color: #000; /* Black links */
+            color: blue; /* Link color */
             text-decoration: none;
         }
 
@@ -43,43 +47,47 @@
     </style>
 </head>
 <body>
-    <h1>Spanning Tree Protocol (STP) Overview</h1>
-    <p>Spanning Tree Protocol (STP) enables switches to become aware of other switches through the advertisement and receipt of bridge protocol data units (BPDUs). STP builds a Layer 2 loop-free topology in an environment by temporarily blocking traffic on redundant ports. STP operates by selecting a specific switch as the best switch and running a tree-based algorithm to identify which redundant ports should not forward traffic.</p>
-    
-    <p>STP has multiple iterations:</p>
-    <ul>
-        <li>802.1D, which is the original specification</li>
-        <li>Per-VLAN Spanning Tree (PVST)</li>
-        <li>Per-VLAN Spanning Tree Plus (PVST+)</li>
-        <li>802.1W Rapid Spanning Tree Protocol (RSTP)</li>
-        <li>802.1S Multiple Spanning Tree Protocol (MST)</li>
-    </ul>
-    
-    <p>Catalyst switches now operate in PVST+, RSTP, and MST modes. All three of these modes are backward compatible with 802.1D.</p>
+    <div class="content">
+        <h1>Spanning Tree Protocol (STP) Overview</h1>
+        <p>Spanning Tree Protocol (STP) enables switches to become aware of other switches through the advertisement and receipt of bridge protocol data units (BPDUs). STP builds a Layer 2 loop-free topology in an environment by temporarily blocking traffic on redundant ports. STP operates by selecting a specific switch as the best switch and running a tree-based algorithm to identify which redundant ports should not forward traffic.</p>
+        
+        <p>STP has multiple iterations:</p>
+        <ul>
+            <li>802.1D, which is the original specification</li>
+            <li>Per-VLAN Spanning Tree (PVST)</li>
+            <li>Per-VLAN Spanning Tree Plus (PVST+)</li>
+            <li>802.1W Rapid Spanning Tree Protocol (RSTP)</li>
+            <li>802.1S Multiple Spanning Tree Protocol (MST)</li>
+        </ul>
+        
+        <p>Catalyst switches now operate in PVST+, RSTP, and MST modes. All three of these modes are backward compatible with 802.1D.</p>
 
-    <div class="image-container">
-        <img src="testimg.jpg" alt="Spanning Tree Protocol Diagram">
-        <!-- Replace "your-image.png" with the actual path to your image -->
-        <!-- Adjust the width attribute as needed -->
-    </div>
+        <div class="image-container">
+            <img src="testimg.jpg" alt="Spanning Tree Protocol Diagram">
+            <!-- Replace "your-image.png" with the actual path to your image -->
+            <!-- Adjust the width attribute as needed -->
+        </div>
 
-    <h2>IEEE 802.1D STP</h2>
-    <p>The original version of STP comes from the IEEE 802.1D standards and provides support for ensuring a loop-free topology for one VLAN. This topic is vital to understand as a foundation for Rapid Spanning Tree Protocol (RSTP) and Multiple Spanning Tree Protocol (MST).</p>
-    
-    <h3>802.1D Port States</h3>
-    <p>In 802.1D STP, every port transitions through the following states:</p>
-    <ul>
-        <li><strong>Disabled:</strong> The port is in an administratively off position (that is, shut down).</li>
-        <li><strong>Blocking:</strong> The switch port is enabled, but the port is not forwarding any traffic to ensure that a loop is not created. The switch does not modify the MAC address table. It can only receive BPDUs from other switches.</li>
-        <li><strong>Listening:</strong> The switch port has transitioned from a blocking state and can now send or receive BPDUs. It cannot forward any other network traffic. The duration of the state correlates to the STP forwarding time. The next port state is learning.</li>
-        <li><strong>Learning:</strong> The switch port can now modify the MAC address table with any network traffic that it receives. The switch still does not forward any other network traffic besides BPDUs. The duration of the state correlates to the STP forwarding time. The next port state is forwarding.</li>
-        <li><strong>Forwarding:</strong> The switch port can forward all network traffic and can update the MAC address table as expected. This is the final state for a switch port to forward network traffic.</li>
-        <li><strong>Broken:</strong> The switch has detected a configuration or an operational problem on a port that can have major effects. The port discards packets as long as the problem continues to exist.</li>
-    </ul>
-    
-    <div>
-        <a href="/index.html">Back to Homepage</a>
-        <!-- You can include links to other study topics here -->
+        <h2>IEEE 802.1D STP</h2>
+        <p>The original version of STP comes from the IEEE 802.1D standards and provides support for ensuring a loop-free topology for one VLAN. This topic is vital to understand as a foundation for Rapid Spanning Tree Protocol (RSTP) and Multiple Spanning Tree Protocol (MST).</p>
+        
+        <h3>802.1D Port States</h3>
+        <p>In 802.1D STP, every port transitions through the following states:</p>
+        <ul>
+            <li><strong>Disabled:</strong> The port is in an administratively off position (that is, shut down).</li>
+            <li><strong>Blocking:</strong> The switch port is enabled, but the port is not forwarding any traffic to ensure that a loop is not created. The switch does not modify the MAC address table. It can only receive BPDUs from other switches.</li>
+            <li><strong>Listening:</strong> The switch port has transitioned from a blocking state and can now send or receive BPDUs. It cannot forward any other network traffic. The duration of the state correlates to the STP forwarding time. The next port state is learning.</li>
+            <li><strong>Learning:</strong> The switch port can now modify the MAC address table with any network traffic that it receives. The switch still does not forward any other network traffic besides BPDUs. The duration of the state correlates to the STP forwarding time. The next port state is forwarding.</li>
+            <li><strong>Forwarding:</strong> The switch port can forward all network traffic and can update the MAC address table as expected. This is the final state for a switch port to forward network traffic.</li>
+            <li><strong>Broken:</strong> The switch has detected a configuration or an operational problem on a port that can have major effects. The port discards packets as long as the problem continues to exist.</li>
+        </ul>
+        
+        <div>
+            <ul>
+                <a href="/index.html">Back to Homepage</a>
+                <!-- You can include links to other study topics here -->
+            </ul>
+        </div>
     </div>
 </body>
 </html>

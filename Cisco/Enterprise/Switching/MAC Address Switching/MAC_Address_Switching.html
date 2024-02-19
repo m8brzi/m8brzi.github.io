@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STP Fundamentals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center; /* Center-align the content horizontally */
+        }
+
+        .content {
+            max-width: 800px; /* Adjust the max width as needed */
+            margin: 0 auto; /* Center the content horizontally */
+            text-align: left; /* Reset text alignment for content */
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3 {
+            text-align: center; /* Center-align headings */
+        }
+
+        ul {
+            text-align: left; /* Left-align lists */
+            padding-left: 20px; /* Add left padding to lists */
+        }
+
+        a {
+            color: blue; /* Link color */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>MAC Address Switching</h1>
+        <p>To be referred to as a "switch," a device must possess a MAC Address Table, enabling it to determine the appropriate Egress port for forwarding frames received on a different Ingress port.</p>
+        <p>Upon the arrival of an Ethernet frame, the Destination MAC Address is checked against the MAC Address Table to determine the correct forwarding destination.</p>
+
+        <p>MAC Address Learning Process:</p>
+        <ul>
+            <li>PC is connected to Switch on Gig0/0.</li>
+            <li>The Switch checks the Source MAC Address against the MAC Address Table.</li>
+            <li>If a match is found, the Switch already has knowledge of that MAC Address. If no match is found, the Switch creates an entry in the MAC Address Table containing the MAC Address of the PC, the Ingress port where the frame arrived, and the VLAN assigned to that port. This process is known as Dynamic MAC Learning.</li>
+        </ul>
+        
+        <p>The MAC Aging Timer, set at 300 seconds, functions as an inactivity timer. Whenever a host transmits Ethernet frames, this timer is reset. However, if the host remains inactive and doesn't send frames for 300 seconds, the inactivity timer expires, leading to the aging out of the corresponding MAC Address entry.</p>
+        <p>When a port is shut down or enters the errdisabled state, the MAC address table entry associated with that port is removed or deleted from the table.</p>
+        
+        <div>
+            <ul>
+                <a href="/index.html">Back to Homepage</a>
+                <!-- You can include links to other study topics here -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

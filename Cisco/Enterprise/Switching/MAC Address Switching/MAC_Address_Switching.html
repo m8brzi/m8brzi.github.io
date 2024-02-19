@@ -60,7 +60,7 @@
             <li>If a match is found, the Switch already has knowledge of that MAC Address. If no match is found, the Switch creates an entry in the MAC Address Table containing the MAC Address of the PC, the Ingress port where the frame arrived, and the VLAN assigned to that port. This process is known as Dynamic MAC Learning.</li>
         </ul>
         
-        <h1>When are MAC Addresses removed from the table?</h1>
+        <h2>When are MAC Addresses removed from the table?</h2>
         <li>The MAC Aging Timer, set at 300 seconds, functions as an inactivity timer. Whenever a host transmits Ethernet frames, this timer is reset. However, if the host remains inactive and doesn't send frames for 300 seconds, the inactivity timer expires, leading to the aging out of the corresponding MAC Address entry.</li>
         <li>When a port is shut down or enters the errdisabled state, the MAC address table entry associated with that port is removed or deleted from the table.</li>
         

@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STP Fundamentals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #000; /* Black text color */
+            background-color: #fff; /* White background color */
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3 {
+            color: #000; /* Black headings */
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: #000; /* Black links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Spanning Tree Protocol (STP) Overview</h1>
@@ -21,10 +58,11 @@
     <p>Catalyst switches now operate in PVST+, RSTP, and MST modes. All three of these modes are backward compatible with 802.1D.</p>
 
     <div class="image-container">
-        <img src="testimg.jpg" alt="Spanning Tree Protocol Diagram" width="800">
+        <img src="testimg.jpg" alt="Spanning Tree Protocol Diagram">
         <!-- Replace "your-image.png" with the actual path to your image -->
         <!-- Adjust the width attribute as needed -->
     </div>
+
     <h2>IEEE 802.1D STP</h2>
     <p>The original version of STP comes from the IEEE 802.1D standards and provides support for ensuring a loop-free topology for one VLAN. This topic is vital to understand as a foundation for Rapid Spanning Tree Protocol (RSTP) and Multiple Spanning Tree Protocol (MST).</p>
     
@@ -38,11 +76,10 @@
         <li><strong>Forwarding:</strong> The switch port can forward all network traffic and can update the MAC address table as expected. This is the final state for a switch port to forward network traffic.</li>
         <li><strong>Broken:</strong> The switch has detected a configuration or an operational problem on a port that can have major effects. The port discards packets as long as the problem continues to exist.</li>
     </ul>
+    
     <div>
-        <ul>
-            <a href="/index.html">Back to Homepage</a>
-            <!-- You can include links to other study topics here -->
-        </ul>
+        <a href="/index.html">Back to Homepage</a>
+        <!-- You can include links to other study topics here -->
     </div>
 </body>
 </html>

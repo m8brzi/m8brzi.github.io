@@ -3,69 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STP Fundamentals</title>
+    <title>Switching</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center; /* Center-align the content horizontally */
+        .content, .sidebar {
+          max-width: 600px; /* Adjust this value to your preference */
+          margin: 0 auto;
+          padding: 20px;
+          text-align: center;
         }
 
-        .container {
-            max-width: 800px; /* Adjust the max width as needed */
-            margin: 0 auto; /* Center the content horizontally */
-            text-align: left; /* Reset text alignment for content */
+        .sidebar h2 {
+          text-align: center;
         }
 
-        .image-container {
-            margin-bottom: 20px;
-            text-align: center;
+        .sidebar ul {
+          list-style-type: none; /* Remove bullets from list items */
+          padding: 0;
         }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1, h2, h3 {
-            text-align: center; /* Center-align headings */
-        }
-
-        ul {
-            text-align: left; /* Left-align lists */
-            padding-left: 20px; /* Add left padding to lists */
-        }
-
-        a {
-            color: blue; /* Link color */
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+      </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-container">
-            <!-- Insert image if needed -->
-        </div>
-        <h1>Spanning-Tree Protocol (STP)</h1>
-
-        <div class="content">
-            <h2>STP Fundamentals</h2>
-            <p>Introduction to the basics of Spanning-Tree Protocol.</p>
-            <p>STP prevents loops in bridged or switched networks by dynamically disabling links between bridges or switches.</p>
-            <p>Key concepts:</p>
-            <ul>
-                <li>Bridge Protocol Data Units (BPDUs)</li>
-                <li>Root Bridge Election</li>
-                <li>Port Roles (Root, Designated, Non-Designated)</li>
-                <li>STP States (Blocking, Listening, Learning, Forwarding)</li>
-            </ul>
-            <p>For more information, you can refer to the <a href="/Cisco/Switching/STP/STP-Fundamentals.html">STP Fundamentals</a> documentation.</p>
-        </div>
+    <div class="content">
+        <h1>Switching</h1>
+    </div>
+    
+    <div class="sidebar">
+        <h2>Spanning-Tree Protocol (STP)</h2>
+        <ul>
+            <li><a href="/Cisco/Switching/STP/STP-Fundamentals.html">STP Fundamentals</a></li>
+            <!-- Add more study topics as needed -->
+        </ul>
+        <h2>EtherChannel</h2>
+        <ul>
+            <li><a href="/Cisco/Switching/EtherChannel/EtherChannel-Fundamentals.html">EtherChannel</a></li>
+            <!-- Add more study topics as needed -->
+        </ul>
     </div>
 </body>
 </html>

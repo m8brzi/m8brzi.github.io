@@ -71,6 +71,17 @@
         <code>#mac address-table static &lt;mac&gt; vlan &lt;id&gt; interface &lt;type/number&gt;</code>
         <p>Dynamic entry</p>
         <li>Learned via Dynamic MAC Learning.</li>
+
+        <h2>MAC Address Table IOS Commands:</h2>
+        <p><code>#show mac address-table &lt;dynamic&gt; &lt;address|value&gt;</code>-> Shows dynamic MAC Addresses learned in the last 300 seconds.</p>
+        <p><code>#show mac address-table count</code>-> Shows sum of dynamic and static MAC Addresses in MAC Address Table.</p>
+        <p><code>#show mac address-table aging-time &lt;secs&gt;</code>-> Changes Aging Timer from 300 seconds to some other value.</p>
+
+        <h2>But how does switching based on Destination MAC Address work?</h2>
+        <li>A frame is received on Gig0/0. Destination MAC Address is checked against the MAC Address Table. The MAC Address is either there or it isn't.</li>
+        <li>If Destination MAC Address is there, it will get forwarded or discarded. If Destination MAC Address is not there, it will get flooded (replicated) out every port, except the Ingress port, in that same VLAN.</li>
+        <p>Frame can be discarded for alot of reasons, but some really simple that come to mind are Runts and Giants (too little or too big frame) and when Hub is connected to a Switch and switch discards frames that are result of two devices communicating behind the hub.</p>
+
         <div>
             <ul>
                 <a href="/index.html">Back to Homepage</a>

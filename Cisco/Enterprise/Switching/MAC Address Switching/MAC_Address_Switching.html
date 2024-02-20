@@ -78,10 +78,10 @@
         <p><code>#show mac address-table aging-time &lt;secs&gt;</code> -> Changes Aging Timer from 300 seconds to some other value.</p>
 
         <h2>But how does switching based on Destination MAC Address work?</h2>
-        <li>A frame is received on Gig0/0. Destination MAC Address is checked against the MAC Address Table. The MAC Address is either there or it isn't.</li>
-        <li>If Destination MAC Address is there, it will get forwarded or discarded. If Destination MAC Address is not there, it will get flooded (replicated) out every port, except the Ingress port, in that same VLAN.</li>
-        <p>Frame can be discarded for alot of reasons, but some really simple that come to mind are Runts and Giants (too little or too big frame) and when Hub is connected to a Switch and switch discards frames that are result of two devices communicating behind the hub.</p>
-
+        <li>For example; when a frame arrives on GigabitEthernet 0/0, the switch checks the destination MAC address against its MAC address table. The presence or absence of the MAC address in the table determines the subsequent action.</li>
+        <li>If the destination MAC address is found in the table, the frame is either forwarded to the corresponding port or discarded. Conversely, if the destination MAC address is not found in the table, the frame is replicated and transmitted out of every port within the same VLAN, excluding the port through which it was received (the ingress port).</li>
+        <p>Frames may be discarded for various reasons, including being too small (runts) or too large (giants). Additionally, frames originating from devices communicating behind a hub connected to the switch may also be discarded.</p>
+        
         <div>
             <ul>
                 <a href="/index.html">Back to Homepage</a>

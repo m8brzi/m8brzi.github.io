@@ -82,7 +82,7 @@
         <li>If the destination MAC address is found in the table, the frame is either forwarded to the corresponding port or discarded. Conversely, if the destination MAC address is not found in the table, the frame is replicated and transmitted out of every port within the same VLAN, excluding the port through which it was received (the ingress port).</li>
         <p>Frames may be discarded for various reasons, including being too small (runts) or too large (giants). Additionally, frames originating from devices communicating behind a hub connected to the switch may also be discarded.</p>
         <pre>
-            SW1# show sdm prefer
+SW1# show sdm prefer
 Showing SDM Template Info
 
 This is the Advanced (high scale) template.
